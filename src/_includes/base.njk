@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or site.tagline }}">
+</head>
+<body>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer>
+    <p>© {{ site.studio }}</p>
+  </footer>
+</body>
+</html>
