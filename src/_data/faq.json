@@ -1,0 +1,12 @@
+[
+  { "q": "When is it out?", "a": "There's no date yet. Join the email list and you'll hear first." },
+  { "q": "What platforms?", "a": "PC (Windows). Mouse and keyboard." },
+  { "q": "How much will it cost?", "a": "Not decided yet." },
+  { "q": "Is it on Steam?", "a": "Not yet. When the store page goes up, this site will link to it." },
+  { "q": "Can scouts die?", "a": "No. A scout who goes down is knocked out and goes home on the bus, unless you can afford to keep them." },
+  { "q": "How hard is it?", "a": "There's no difficulty setting; the game is balanced as one game. The Popcorn Shop makes later runs easier, the Pact makes them harder, and a gentler Peaceful days option turns the night raids off entirely." },
+  { "q": "How long is a run?", "a": "A good first run lasts around twenty in-game days, about three and a half hours. You can change how long the days run." },
+  { "q": "Is there a tutorial?", "a": "Yes: an optional guided first day that walks you through building the camp and your first raid." },
+  { "q": "Can I play it now?", "a": "Not publicly. There are friends-and-family playtest builds; the email list is the way to hear about wider tests." },
+  { "q": "Can I stream or make videos of it?", "a": "Yes, once you can play it." }
+]

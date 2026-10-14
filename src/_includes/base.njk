@@ -35,6 +35,8 @@
       <p>© 2026 {{ site.studio }}</p>
       <ul class="footer-links">
         {%- for item in nav %}{% if item.ready and item.url != "/" %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endif %}{% endfor %}
+        <li><a href="/privacy/">Privacy</a></li>
+        {%- if site.contactEmail %}<li><a href="mailto:{{ site.contactEmail }}">{{ site.contactEmail }}</a></li>{% endif %}
       </ul>
     </div>
   </footer>

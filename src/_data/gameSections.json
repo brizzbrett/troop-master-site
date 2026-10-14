@@ -1,0 +1,54 @@
+[
+  { "id": "day", "title": "The day", "shot": "den-odds",
+    "alt": "Three scouts at the mouth of a bear den, its card reading the odds of a raid.",
+    "text": [
+      "Dawn is 5 AM and nightfall is 7 PM, and the day gets most of the clock because it is where the game is played.",
+      "Right-click a tree, a pond or a stone with a scout selected and they go, and keep going until the job is done. Order buildings from the HQ board, set each patrol's standing jobs, and raid an animal den for its hoard, if three scouts can hold the line while they do."
+    ] },
+  { "id": "attention", "title": "Attention is a resource", "shot": "scout-card",
+    "alt": "A selected scout and their backpack card, with the rest of the troop at work.",
+    "text": [
+      "A scout left on auto-work with no orders slowly gets neglected, and it shows. Two ignored days and they're Glum; further down and they stop volunteering for anything. Giving a real order pays that off.",
+      "The day job is not just logistics. It is looking at your scouts."
+    ] },
+  { "id": "night", "title": "The night", "shot": "raid-wall",
+    "alt": "Bears and foxes coming over the camp wall at night.",
+    "text": [
+      "At 7 PM the caves start releasing animals in synchronized waves. A third of them hunt your scouts; the rest go for the walls, the towers and the Storage.",
+      "Towers fire on their own or with a scout posted on them. Walls go up a quarter of the ring at a time, and each quarter falls all at once."
+    ] },
+  { "id": "forecast", "title": "The forecast", "shot": "night-plan",
+    "alt": "Tonight's plan: three suggested moves, each showing the grade it lifts, ticked and ready to confirm.",
+    "text": [
+      "Before dusk the forecast tells you how many raiders are coming and from which side, grades the camp READY, SHAKY or OUTMATCHED, and offers tonight's plan: a few moves that lift the grade, which you tick and confirm."
+    ] },
+  { "id": "dawn", "title": "Dawn", "shot": "morning-report",
+    "alt": "The morning report: one row per scout for the whole day and night, the MVP, a promotion, and who is out.",
+    "text": [
+      "Every building posts its upkeep to one account, and dawn pays what the stores can afford. What's left owed wears down the HQ.",
+      "The morning report gives every scout a row: kills, damage, healing, repairs, the day's MVP, and who is out."
+    ] },
+  { "id": "camp", "title": "The camp", "shot": "board-build",
+    "alt": "The notice board's Work Orders tab at HQ level 1: Shelter, Campfire and First Aid Tent.",
+    "text": [
+      "The HQ grows through three levels, and each one opens new buildings: shelters, campfires, a First Aid Tent, refineries for planks, bricks and rations, walls and towers, and training grounds.",
+      "Upgrading takes rare materials you have to win from dens and alphas."
+    ] },
+  { "id": "wilderness", "title": "The wilderness", "shot": "dust-devil",
+    "alt": "A dust devil crossing a Desert camp.",
+    "text": [
+      "Thirteen species, each with its own life by day. Foragers rob your Storage; heavies hunt scouts; birds mind their own business until you cut down their tree.",
+      "From Day 5 elites start showing up, and they keep getting more common."
+    ] },
+  { "id": "weather", "title": "Weather and the storyteller", "shot": "tundra-cold",
+    "alt": "A Tundra night. A scout away from the fire turns blue from the cold.",
+    "text": [
+      "Each map rolls its own sky, and weather changes how the game plays: blizzards put out campfires, sandstorms slow everyone, fog shortens how far your towers can see, lightning starts wildfires.",
+      "On top of that, a storyteller schedules incidents based on how comfortable you are."
+    ] },
+  { "id": "runs", "title": "Between runs", "shot": "popcorn-shop",
+    "alt": "The Popcorn Shop, where upgrades are bought between runs.",
+    "text": [
+      "Runs end. What carries forward is popcorn, spent in the Popcorn Shop on 28 upgrades; the Evidence Board, collecting the papers you find out in the wild; 40 achievements; and, once your first alpha falls, the Pact: nine conditions to make the next run harder on purpose."
+    ] }
+]

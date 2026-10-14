@@ -1,0 +1,32 @@
+---
+layout: page.njk
+title: The Game
+permalink: /game/
+intro: Everything Troop Master is, in more detail than the front page.
+description: How Troop Master plays - the day, the night, dawn, the camp, the wilderness, the weather and what carries between runs.
+---
+<nav class="toc wrap" aria-label="On this page">
+  <ul>
+    {%- for s in gameSections %}<li><a href="#{{ s.id }}">{{ s.title }}</a></li>{% endfor %}
+  </ul>
+</nav>
+{%- for s in gameSections %}
+<section class="feature wrap{% if loop.index is even %} feature-flip{% endif %}" id="{{ s.id }}" aria-labelledby="{{ s.id }}-h">
+  <div class="copy">
+    <h2 id="{{ s.id }}-h">{{ s.title }}</h2>
+    {%- for p in s.text %}
+    <p>{{ p }}</p>
+    {%- endfor %}
+  </div>
+  <figure class="feature-shot">
+    {% set shot = s.shot %}{% set alt = s.alt %}{% set sizes = "(min-width: 1100px) 600px, 100vw" %}{% set eager = false %}
+    {% include "shot.njk" %}
+  </figure>
+</section>
+{%- endfor %}
+<div class="wrap">
+  <section class="close-card page-signup" aria-labelledby="game-signup-h">
+    <h2 id="game-signup-h">Get word when it's ready</h2>
+    {% set formId = "game" %}{% include "signup.njk" %}
+  </section>
+</div>

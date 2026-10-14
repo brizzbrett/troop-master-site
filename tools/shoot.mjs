@@ -9,7 +9,8 @@ import { chromium } from "playwright";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const siteDir = path.join(root, "_site");
 const outDir = path.join(root, "shots");
-const pages = process.argv.slice(2).length ? process.argv.slice(2) : ["/"];
+// Page paths may be given without the leading slash ("game/"), since Git Bash rewrites "/game/" into a Windows path.
+const pages = (process.argv.slice(2).length ? process.argv.slice(2) : ["/"]).map((p) => (p.startsWith("/") ? p : "/" + p));
 const types = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".webp": "image/webp",
   ".png": "image/png", ".jpeg": "image/jpeg", ".woff2": "font/woff2", ".xml": "application/xml", ".svg": "image/svg+xml" };
 

@@ -1,8 +1,8 @@
 [
   { "label": "Home", "url": "/", "ready": true },
-  { "label": "The Game", "url": "/game/", "ready": false },
-  { "label": "Troop 13", "url": "/troop-13/", "ready": false },
+  { "label": "The Game", "url": "/game/", "ready": true },
+  { "label": "Troop 13", "url": "/troop-13/", "ready": true },
   { "label": "News", "url": "/news/", "ready": false },
   { "label": "Press", "url": "/press/", "ready": false },
-  { "label": "FAQ", "url": "/faq/", "ready": false }
+  { "label": "FAQ", "url": "/faq/", "ready": true }
 ]

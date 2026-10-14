@@ -1,0 +1,18 @@
+---
+layout: page.njk
+title: FAQ
+heading: Questions
+permalink: /faq/
+description: Release, platforms, price, difficulty and the rest of the common questions about Troop Master.
+---
+<div class="wrap">
+  <dl class="copy faq">
+    {%- for f in faq %}
+    <div class="faq-item">
+      <dt>{{ f.q }}</dt>
+      <dd>{{ f.a }}</dd>
+    </div>
+    {%- endfor %}
+  </dl>
+  <p class="page-note">Something else? Email <a href="mailto:{{ site.contactEmail }}">{{ site.contactEmail }}</a>.</p>
+</div>
