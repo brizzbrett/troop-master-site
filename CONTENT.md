@@ -1,7 +1,6 @@
 # Site copy (draft for review)
 
 Every word that will appear on the site, page by page. Images are named by their file in the game repo.
-Lines marked **[ASK]** are open questions for Brett.
 
 ---
 
@@ -103,15 +102,10 @@ Intro: *Everything Troop Master is, in more detail than the front page.*
 > ### You are not the only troop out here.
 > Troop 13 has been in these woods before you. They run a tight operation: quarterly memos, specification sheets, a lot of cookie money, and field sites nobody is supposed to find.
 >
-> Your scouts keep finding their paperwork. Fifty-three pieces of it, scattered across every map. Collect it, pin it to the Evidence Board, and start putting together what Troop 13 has been doing to the animals.
->
-> Last year's troop never came home.
+> Your scouts keep finding their paperwork, scattered across every map. Collect it, pin it to the Evidence Board, and start putting together what Troop 13 has been doing to the animals.
 
 Images: `troop13-logo.png`, `lore-memo.png`, `lore-badge.png`, `lore-site.png` (pinned on a corkboard).
-Not shown: `lore-daisy.png`, `lore-timmy.png`, `lore-invitation.png`.
-
-**[ASK]** Is "Last year's troop never came home" OK as a public hook, or too close to Timmy's thread?
-**[ASK]** Should the Den Mother appear at all? Default: no. Her invitation and her alpha portrait stay off the site.
+Not shown anywhere on the site: `lore-daisy.png`, `lore-timmy.png`, `lore-invitation.png`, the Den Mother (no name, no portrait, no alpha card).
 
 ---
 
@@ -124,9 +118,7 @@ Four seed posts, written as short updates (not full patch notes):
 3. **0.1.4: The evidence, and four bosses you have to find** (1 Aug 2026)
 4. **0.1.3: Water, ice, and days that play differently** (31 Jul 2026)
 
-Each version post: the three or four biggest changes from `Docs/CHANGELOG.md` in plain words, plus a line about the playtest.
-
-**[ASK]** Do you want the old versions posted at all, or should News start with "The site is up" and 0.2.0?
+Each version post: the three or four biggest changes from `Docs/CHANGELOG.md` in plain words, plus a line about the playtest. (The 0.1.4 post says "bosses you have to find" and never names them.)
 
 ---
 
@@ -162,18 +154,16 @@ Each version post: the three or four biggest changes from `Docs/CHANGELOG.md` in
 **Features**
 - A colony sim by day and a tower defense by night, in the same camp, on the same clock
 - Named scouts with moods, traits, six field badges and 38 perks; rank is earned, never assigned
-- Nobody dies: knocked-out scouts go home on the noon bus unless you saved a bed and the herbs to keep them
+- Nobody dies: knocked-out scouts go home on the noon bus unless you built a First Aid Tent and saved the herbs to keep them
 - Four maps with their own animals, weather, hazards and rules
 - Night raids that grow to hundreds of animals, and a named alpha boss every tenth night
 - A storyteller that reads how comfortable your camp is and sends trouble accordingly
-- A story told through 53 painted documents left by Troop 13
+- A story told through painted documents left behind by Troop 13
 - Between runs: the Popcorn Shop, 40 achievements, and the Pact for players who want it harder
 
 **About the developer**
 
-> Bretts Games is one person. Troop Master has been in development since 2017 and moved to Unity 6 in 2026.
-
-**[ASK]** Is the 2017 start date something you want public? Default: "in development" with no year.
+> Bretts Games is one person. Troop Master is in active development.
 
 Also on the page: screenshots (10, 1920×1080, plus a zip), the logo on light and dark backgrounds, colors and font, "Video: coming soon".
 
