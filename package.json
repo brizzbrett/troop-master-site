@@ -7,7 +7,8 @@
   "scripts": {
     "build": "eleventy && node tools/press-pack.mjs",
     "build:pages": "eleventy --pathprefix=/troop-master-site/ && node tools/press-pack.mjs",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "check": "npm run build && node tools/check-links.mjs && html-validate \"_site/**/*.html\""
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.2",
@@ -16,6 +17,8 @@
     "@fontsource/atkinson-hyperlegible": "5.2.6",
     "@fontsource/chewy": "5.2.5",
     "fflate": "0.8.2",
+    "html-validate": "11.16.0",
+    "lighthouse": "13.5.0",
     "playwright": "1.55.0"
   }
 }

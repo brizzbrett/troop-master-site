@@ -24,8 +24,10 @@ const ART = [
   "scout", "scout-portrait", "troop13-logo", "logo",
   "emblem-forest", "emblem-jungle", "emblem-desert", "emblem-tundra",
   "mood-inspired", "mood-content", "mood-glum", "mood-miserable",
-  "lore-memo", "lore-badge", "lore-site",
 ];
+// The Troop 13 papers come from the game's full-size lore art (about 1000 px wide; the GDD copies are 250),
+// trimmed to the paper's edges.
+const LORE = [["ledger_0", "lore-memo"], ["badge_0", "lore-badge"], ["sites_0", "lore-site"]];
 
 const jobs = [
   ...SHOTS.map((n) => [path.join(game, "Docs/Screenshots", `${n}.png`), `src/assets/shots/${n}.png`]),
@@ -48,5 +50,12 @@ for (const [from, to] of jobs) {
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.copyFileSync(from, dest);
 }
-console.log(`copied ${jobs.length - missing} files${missing ? `, ${missing} missing` : ""}`);
+const { default: sharp } = await import("sharp");
+for (const [from, to] of LORE) {
+  const src = path.join(game, "Assets/Troop Master/Resources/UI/Lore", `${from}.png`);
+  if (!fs.existsSync(src)) { console.error("MISSING", src); missing++; continue; }
+  await sharp(src).trim().png().toFile(path.join(site, "src/assets/art", `${to}.png`));
+}
+
+console.log(`copied ${jobs.length + LORE.length - missing} files${missing ? `, ${missing} missing` : ""}`);
 process.exit(missing ? 1 : 0);

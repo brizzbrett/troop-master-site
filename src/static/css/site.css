@@ -44,6 +44,7 @@ a:hover { color: var(--brown); }
 :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
 
 .wrap { max-width: 1120px; margin-inline: auto; padding-inline: var(--gutter); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .skip { position: absolute; left: -999px; top: 8px; background: var(--gold); color: var(--ink); padding: 8px 14px; border-radius: 8px; z-index: 10; }
 .skip:focus { left: 8px; }
 
@@ -70,7 +71,7 @@ a:hover { color: var(--brown); }
 }
 .btn:hover { filter: brightness(1.08); }
 .btn:active { transform: translateY(2px); box-shadow: inset 0 -2px 0 rgb(0 0 0 / .28); }
-.btn-green { background: var(--green); }
+.btn-green { background: var(--green-deep); } /* the lighter game green fails text contrast with cream (3.5:1); this is 5.6:1 */
 .btn-ghost { background: var(--wood-2); color: var(--on-wood); }
 
 /* ---------- materials ---------- */
@@ -215,6 +216,7 @@ figure { margin: 0; }
 .page-signup { margin-inline: auto; }
 .btn-link { display: inline-block; text-decoration: none; }
 .btn-link:hover { color: var(--cream); }
+.btn-wishlist { text-align: center; font-size: 1.4rem; padding-block: 15px 13px; }
 
 .toc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 10px; }
 .toc a { display: inline-block; padding: 6px 12px; border-radius: 999px; background: var(--wood-2); color: var(--on-wood); text-decoration: none; font-weight: 700; font-size: .9rem; border: 1px solid var(--wood-line); }

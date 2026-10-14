@@ -6,7 +6,11 @@
   <title>{% if title %}{{ title }} · {{ site.name }}{% else %}{{ site.name }}: {{ site.tagline }}{% endif %}</title>
   <meta name="description" content="{{ description or site.description }}">
   {%- set pageTitle = (title + " · " + site.name) if title else (site.name + ": " + site.tagline) %}
+  {%- if noindex %}
+  <meta name="robots" content="noindex">
+  {%- else %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {%- endif %}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:title" content="{{ pageTitle }}">

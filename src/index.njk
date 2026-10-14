@@ -83,7 +83,7 @@ bodyClass: home
         </div>
         <div class="map-body">
           <h3>{{ m.name }}</h3>
-          <p class="map-diff" aria-label="Difficulty {{ m.difficulty }} of 4">{% for i in range(4) %}<span class="pip{% if i < m.difficulty %} on{% endif %}"></span>{% endfor %}</p>
+          <p class="map-diff"><span class="sr-only">Difficulty {{ m.difficulty }} of 4</span>{% for i in range(4) %}<span class="pip{% if i < m.difficulty %} on{% endif %}" aria-hidden="true"></span>{% endfor %}</p>
           <p>{{ m.text }}</p>
           <p class="map-animals">{{ m.animals }}</p>
         </div>

@@ -1,5 +1,25 @@
 # Troop Master website: plan
 
+## Status (2026-10-14)
+**P0–P6 done and live** at https://brizzbrett.github.io/troop-master-site/. Kit form 10043486 is wired and tested end to end. The Kit sender is troopmastergame@gmail.com; never use an @yahoo.com sender, because Yahoo's DMARC rule `p=reject` makes Gmail silently refuse it.
+
+Working on the site:
+- `npm start`: live preview.
+- `npm run check`: build, link check, HTML validation.
+- `node tools/shoot.mjs <page/>`: desktop + phone screenshots in `shots/`, flags overflow and console errors.
+- `node tools/serve.mjs` then `node tools/lighthouse.mjs http://127.0.0.1:8089 index.html game/`: Lighthouse scores.
+- `node tools/import-assets.mjs`: re-copy art from the game repo.
+- `node tools/make-brand.mjs`: favicon, share card, wordmark variants.
+- `node tools/test-signup.mjs you@x.com`: one real signup on the live site.
+- Pass page paths without the leading slash; Git Bash rewrites `/game/`.
+
+Later:
+- Steam store URL in `site.json` to turn on the Wishlist button.
+- A custom domain (a CNAME file and `url` in `site.json`).
+- A trailer for the press kit.
+- A larger TM badge.
+- A 0.2.0 news post when it ships.
+
 ## Context
 Brett wants an official site for the game, like publishers run, to give information and advertise. The game is at 0.2.0, with friend playtests and no Steam store page yet (the Steamworks test App ID is still 480). So the site's job right now is to **collect emails**, and later to **send people to a Wishlist button**.
 

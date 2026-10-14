@@ -1,4 +1,8 @@
-{#- The email signup. Needs `formId` (a unique id prefix). Posts to Kit; shows a "soon" note while no form id is set. -#}
+{#- The email signup. Needs `formId` (a unique id prefix). Posts to Kit; shows a "soon" note while no form id is set.
+    Once site.steamUrl is set, a Wishlist button leads, above the form. -#}
+{%- if site.steamUrl %}
+<a class="btn btn-green btn-link btn-wishlist" href="{{ site.steamUrl }}">Wishlist on Steam</a>
+{%- endif %}
 {%- if site.kitFormId %}
 <form class="signup" action="https://app.kit.com/forms/{{ site.kitFormId }}/subscriptions" method="post" target="_blank" data-signup>
   <label class="signup-label" for="{{ formId }}-email">Your email</label>
