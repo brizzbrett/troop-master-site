@@ -1,6 +1,178 @@
 ---
 layout: base.njk
+bodyClass: home
 ---
-<h1>{{ site.name }}</h1>
-<p>{{ site.tagline }}</p>
-<p>The full site is on its way.</p>
+<section class="hero">
+  <div class="hero-art">
+    {% set shot = "hero" %}{% set alt = "Dusk on a Forest map. The lamps are lit and the troop is inside the wall." %}{% set sizes = "100vw" %}{% set eager = true %}
+    {% include "shot.njk" %}
+  </div>
+  <div class="hero-sign">
+    <h1 class="wordmark">
+      <img src="/assets/art/wordmark.png" alt="{{ site.name }}"
+        eleventy:widths="600,1200" eleventy:formats="webp,png" sizes="(min-width: 700px) 560px, 88vw" loading="eager">
+    </h1>
+    <p class="hero-tagline">{{ site.tagline }}</p>
+    <p class="hero-pitch">A survival game about a troop of Wilderness Scouts camped somewhere they should not be.</p>
+    {% set formId = "top" %}{% include "signup.njk" %}
+    <p class="hero-meta">PC · In development</p>
+  </div>
+</section>
+
+<section class="band band-loop" aria-labelledby="loop-h">
+  <div class="wrap split">
+    <div class="copy">
+      <h2 id="loop-h">Two games, one camp</h2>
+      <p>By day it plays as a colony sim. Your scouts gather wood and water, raise a camp, take orders and get on with their own work when you are not watching.</p>
+      <p>By night the animals that live in the caves come for the camp all at once, and the same game becomes a tower defense.</p>
+      <p>Dawn settles the bill for both: the upkeep, the damage, and who is still standing.</p>
+    </div>
+    <figure class="compare" data-compare>
+      <div class="compare-frame">
+        <div class="compare-day">
+          {% set shot = "camp-day" %}{% set alt = "The camp at 1 PM, in full daylight." %}{% set sizes = "(min-width: 1100px) 620px, 100vw" %}{% set eager = false %}
+          {% include "shot.njk" %}
+        </div>
+        <div class="compare-night" data-compare-night>
+          {% set shot = "camp-night" %}{% set alt = "The same camp at 11 PM, lit by lamps and the campfire." %}
+          {% include "shot.njk" %}
+        </div>
+        <span class="compare-tag compare-tag-day" aria-hidden="true">1 PM</span>
+        <span class="compare-tag compare-tag-night" aria-hidden="true">11 PM</span>
+      </div>
+      <label class="compare-label" for="compare-range">Drag to move the clock</label>
+      <input id="compare-range" class="compare-range" type="range" min="0" max="100" value="50" data-compare-range>
+      <figcaption>The same camp at 1 PM and 11 PM.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band band-scouts" aria-labelledby="scouts-h">
+  <div class="wrap split split-flip">
+    <div class="copy">
+      <h2 id="scouts-h">The scouts are people, not units</h2>
+      <p>Every scout has a name, a face they keep for the whole run, a mood that answers to how much attention you pay them, and one or two traits you can't change.</p>
+      <p>Rank is earned, never assigned. There is no class menu: the archer is the scout who kept making clean shots. Six field badges and thirty-eight perks take a Recruit all the way to Master Cadet.</p>
+      <h3>Nobody dies</h3>
+      <p>A scout who goes down is knocked out and goes home on the noon bus. Unless you built a First Aid Tent and saved the herbs to keep them. A night can still cost you someone, and the morning report remembers who.</p>
+    </div>
+    <div class="scouts-art">
+      <figure class="paper">
+        {% set shot = "scout-card" %}{% set alt = "A scout's card: portrait, name, rank, mood, and what they are doing." %}{% set sizes = "(min-width: 1100px) 560px, 100vw" %}
+        {% include "shot.njk" %}
+      </figure>
+      <ul class="moods" aria-label="The four moods a scout's portrait can show">
+        {%- for m in ["inspired", "content", "glum", "miserable"] %}
+        <li><img src="/assets/art/mood-{{ m }}.png" alt="" eleventy:widths="128" eleventy:formats="webp,png"><span>{{ m | capitalize }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band band-maps" aria-labelledby="maps-h">
+  <div class="wrap">
+    <h2 id="maps-h">Four wildernesses, each harder than the last</h2>
+    <ol class="maps">
+      {%- for m in maps %}
+      <li class="map map-{{ m.id }}">
+        <div class="map-shot">
+          {% set shot = "biome-" + m.id %}{% set alt = "A camp on the " + m.name + " map." %}{% set sizes = "(min-width: 1100px) 260px, (min-width: 640px) 50vw, 100vw" %}
+          {% include "shot.njk" %}
+          <img class="map-emblem" src="/assets/art/emblem-{{ m.id }}.png" alt="" eleventy:widths="128" eleventy:formats="webp,png">
+        </div>
+        <div class="map-body">
+          <h3>{{ m.name }}</h3>
+          <p class="map-diff" aria-label="Difficulty {{ m.difficulty }} of 4">{% for i in range(4) %}<span class="pip{% if i < m.difficulty %} on{% endif %}"></span>{% endfor %}</p>
+          <p>{{ m.text }}</p>
+          <p class="map-animals">{{ m.animals }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+    <p class="maps-foot">Every map is generated fresh for each run.</p>
+  </div>
+</section>
+
+<section class="band band-alphas" aria-labelledby="alphas-h">
+  <div class="wrap">
+    <div class="copy copy-wide">
+      <h2 id="alphas-h">Every tenth night, something bigger</h2>
+      <p>A named boss walks out of the dark: the Honey Bandit, the Pack Leader, the Silverback, the Tusker and eight more. Each one telegraphs its attacks on the ground, and each one enrages when it's nearly beaten. Win and you keep a prize: a heart, a trophy, or its cub as your camp's mascot.</p>
+      <p>Some of them aren't in the rotation. You'll have to find those yourself.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="lineup">
+      {%- for group in alphas %}
+      <div class="lineup-group">
+        <p class="lineup-map">{{ group.map }}</p>
+        <div class="lineup-scroll" tabindex="0" aria-label="The {{ group.map }} alphas, drawn to scale beside a scout">
+          <div class="lineup-row">
+            <figure class="lineup-fig lineup-scout" style="--s: 1">
+              <img src="/assets/art/scout.png" alt="A scout, for scale" eleventy:widths="140" eleventy:formats="webp,png">
+              <figcaption><b>A scout</b><span>1×</span></figcaption>
+            </figure>
+          {%- for a in group.list %}
+            <figure class="lineup-fig" style="--s: {{ a.scale }}">
+              <img src="/assets/art/alpha-{{ a.file }}.png" alt="{{ a.name }}, an alpha {{ a.species | lower }}" eleventy:widths="400" eleventy:formats="webp,png">
+              <figcaption><b>{{ a.name }}</b><span>{{ a.species }} · {{ a.scale }}×</span></figcaption>
+            </figure>
+          {%- endfor %}
+          </div>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="lineup-note">Drawn to scale. The numbers are heights in scouts.</p>
+  </div>
+</section>
+
+<section class="band band-world" aria-labelledby="world-h">
+  <div class="wrap">
+    <div class="copy copy-wide">
+      <h2 id="world-h">The wilderness doesn't wait for you</h2>
+      <p>Animals forage, steal from your stores and drag the loot back to their dens. Weather rolls through: rain, storms, sandstorms, blizzards. A storyteller watches how comfortable your camp has gotten and sends a festival, a wildfire or a herd through accordingly. By Day 30 the night brings hundreds of animals at once.</p>
+    </div>
+    <div class="world-grid">
+      {%- for w in [["den-odds", "Three scouts at the mouth of a bear den, its card reading the odds of a raid."], ["dust-devil", "A dust devil crossing a Desert camp."], ["raid-wall", "Bears and foxes coming over the camp wall at night."]] %}
+      <figure>
+        {% set shot = w[0] %}{% set alt = w[1] %}{% set sizes = "(min-width: 1100px) 340px, (min-width: 700px) 33vw, 100vw" %}
+        {% include "shot.njk" %}
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band band-gallery" aria-labelledby="gallery-h">
+  <div class="wrap">
+    <h2 id="gallery-h">Screenshots</h2>
+    <ul class="gallery" data-gallery>
+      {%- for g in gallery %}
+      <li>
+        <button type="button" class="gallery-item" data-gallery-item aria-label="Open screenshot: {{ g.alt }}">
+          {% set shot = g.file %}{% set alt = g.alt %}{% set sizes = "(min-width: 1100px) 340px, (min-width: 700px) 33vw, 50vw" %}
+          {% include "shot.njk" %}
+        </button>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <dialog class="lightbox" data-lightbox aria-label="Screenshot viewer">
+    <div class="lightbox-stage" data-lightbox-stage></div>
+    <p class="lightbox-caption" data-lightbox-caption></p>
+    <div class="lightbox-controls">
+      <button type="button" class="btn btn-ghost" data-lightbox-prev>Previous</button>
+      <button type="button" class="btn btn-ghost" data-lightbox-next>Next</button>
+      <button type="button" class="btn btn-ghost" data-lightbox-close>Close</button>
+    </div>
+  </dialog>
+</section>
+
+<section class="band band-close" aria-labelledby="close-h">
+  <div class="wrap close-card">
+    <h2 id="close-h">Get word when it's ready</h2>
+    {% set formId = "bottom" %}{% include "signup.njk" %}
+  </div>
+</section>

@@ -1,0 +1,11 @@
+[
+  { "file": "hero", "alt": "Dusk on a Forest map. The lamps are lit and the troop is inside the wall." },
+  { "file": "raid-breach", "alt": "A night raid breaking through one quarter of the camp wall." },
+  { "file": "alpha", "alt": "The Honey Bandit, an alpha bear, at the edge of the camp with its attack marked on the ground." },
+  { "file": "tundra-cold", "alt": "A Tundra night. A scout away from the fire turns blue from the cold." },
+  { "file": "biome-jungle", "alt": "A camp in the Jungle, with dense trees around the wall." },
+  { "file": "visible-perk", "alt": "A visible perk: the hawk carrying a scout home before they are knocked out." },
+  { "file": "morning-report", "alt": "The morning report, one row per scout for the whole day and night." },
+  { "file": "bus", "alt": "The noon bus parked outside the camp gate." },
+  { "file": "popcorn-shop", "alt": "The Popcorn Shop, where upgrades are bought between runs." }
+]

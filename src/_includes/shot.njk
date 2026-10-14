@@ -1,0 +1,4 @@
+{#- A gameplay screenshot at responsive sizes. Needs `shot` (file name without .png), `alt`, optional `sizes`, `eager`. -#}
+<img src="/assets/shots/{{ shot }}.png" alt="{{ alt }}"
+  eleventy:widths="480,960,1440,1920" eleventy:formats="webp,jpeg"
+  sizes="{{ sizes or '(min-width: 1100px) 1040px, 100vw' }}"{% if eager %} loading="eager" fetchpriority="high"{% endif %}>

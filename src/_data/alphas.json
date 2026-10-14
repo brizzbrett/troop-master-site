@@ -1,0 +1,22 @@
+[
+  { "map": "Forest", "list": [
+    { "file": "nut", "name": "The Nut", "species": "Squirrel", "scale": 1.1 },
+    { "file": "swindler", "name": "The Swindler", "species": "Fox", "scale": 1.2 },
+    { "file": "honeybandit", "name": "The Honey Bandit", "species": "Bear", "scale": 3.1 }
+  ]},
+  { "map": "Jungle", "list": [
+    { "file": "stalker", "name": "The Stalker", "species": "Snake", "scale": 1.6 },
+    { "file": "weaver", "name": "The Weaver", "species": "Spider", "scale": 1.9 },
+    { "file": "silverback", "name": "The Silverback", "species": "Gorilla", "scale": 2.7 }
+  ]},
+  { "map": "Desert", "list": [
+    { "file": "burrower", "name": "The Burrower", "species": "Scorpion", "scale": 1.7 },
+    { "file": "marauder", "name": "The Marauder", "species": "Jackal", "scale": 1.2 },
+    { "file": "tusker", "name": "The Tusker", "species": "Warthog", "scale": 1.4 }
+  ]},
+  { "map": "Tundra", "list": [
+    { "file": "tide", "name": "The Tide", "species": "Lemming", "scale": 1.5 },
+    { "file": "packleader", "name": "The Pack Leader", "species": "Wolf", "scale": 2.0 },
+    { "file": "abominable", "name": "The Abominable", "species": "Yeti", "scale": 3.2 }
+  ]}
+]

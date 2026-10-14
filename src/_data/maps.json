@@ -1,0 +1,14 @@
+[
+  { "id": "forest", "name": "Forest", "difficulty": 1,
+    "text": "The gentle start. Ponds, berry bushes, plenty of stone, and fireflies after dark.",
+    "animals": "Squirrels, foxes and bears" },
+  { "id": "jungle", "name": "Jungle", "difficulty": 2,
+    "text": "Hidden snares and sinkholes, vines that grab, poison, and flash floods.",
+    "animals": "Spiders, snakes and gorillas" },
+  { "id": "desert", "name": "Desert", "difficulty": 3,
+    "text": "No water but what you tap from cacti. Sandstorms, dust devils, and mirages that lure your workers away.",
+    "animals": "Scorpions, jackals and warthogs" },
+  { "id": "tundra", "name": "Tundra", "difficulty": 4,
+    "text": "Nights cold enough to hurt anyone left outside, blizzards, thin ice, and the aurora overhead.",
+    "animals": "Lemmings, wolves and yetis" }
+]

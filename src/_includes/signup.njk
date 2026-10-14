@@ -1,0 +1,16 @@
+{#- The email signup. Needs `formId` (a unique id prefix). Posts to Kit; shows a "soon" note while no form id is set. -#}
+{%- if site.kitFormId %}
+<form class="signup" action="https://app.kit.com/forms/{{ site.kitFormId }}/subscriptions" method="post" target="_blank" data-signup>
+  <label class="signup-label" for="{{ formId }}-email">Your email</label>
+  <div class="signup-row">
+    <input id="{{ formId }}-email" name="email_address" type="email" autocomplete="email" required placeholder="you@example.com">
+    <button class="btn btn-green" type="submit">Sign me up</button>
+  </div>
+  <p class="signup-note" role="status" data-signup-status>One email when there's something to play. Nothing else.</p>
+</form>
+{%- else %}
+<div class="signup signup-soon">
+  <p class="signup-soon-title">Signups open soon.</p>
+  <p class="signup-note">There will be one email when there's something to play: a demo, a store page, a release date. Nothing else.</p>
+</div>
+{%- endif %}
