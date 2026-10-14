@@ -1,0 +1,58 @@
+{
+  "screenshots": [
+    {
+      "file": "hero",
+      "alt": "Dusk on a Forest map. The lamps are lit and the troop is inside the wall."
+    },
+    {
+      "file": "camp-day",
+      "alt": "The camp at 1 PM, in full daylight."
+    },
+    {
+      "file": "camp-night",
+      "alt": "The same camp at 11 PM, lit by lamps and the campfire."
+    },
+    {
+      "file": "raid-breach",
+      "alt": "A night raid breaking through one quarter of the camp wall."
+    },
+    {
+      "file": "alpha",
+      "alt": "The Honey Bandit, an alpha bear, at the edge of the camp with its attack marked on the ground."
+    },
+    {
+      "file": "den-odds",
+      "alt": "Three scouts at the mouth of a bear den, its card reading the odds of a raid."
+    },
+    {
+      "file": "biome-jungle",
+      "alt": "A camp in the Jungle, with dense trees around the wall."
+    },
+    {
+      "file": "tundra-cold",
+      "alt": "A Tundra night. A scout away from the fire turns blue from the cold."
+    },
+    {
+      "file": "morning-report",
+      "alt": "The morning report, one row per scout for the whole day and night."
+    }
+  ],
+  "logos": [
+    {
+      "file": "troop-master-wordmark.png",
+      "label": "Wordmark, transparent (4080 × 861)"
+    },
+    {
+      "file": "troop-master-wordmark-on-light.png",
+      "label": "Wordmark on light"
+    },
+    {
+      "file": "troop-master-wordmark-on-dark.png",
+      "label": "Wordmark on its sign, for dark backgrounds"
+    },
+    {
+      "file": "troop-master-badge.png",
+      "label": "TM badge, transparent (169 × 169)"
+    }
+  ]
+}

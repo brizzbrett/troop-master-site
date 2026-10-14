@@ -5,8 +5,8 @@
   "description": "The official website for Troop Master.",
   "type": "module",
   "scripts": {
-    "build": "eleventy",
-    "build:pages": "eleventy --pathprefix=/troop-master-site/",
+    "build": "eleventy && node tools/press-pack.mjs",
+    "build:pages": "eleventy --pathprefix=/troop-master-site/ && node tools/press-pack.mjs",
     "start": "eleventy --serve"
   },
   "devDependencies": {
@@ -15,6 +15,7 @@
     "@11ty/eleventy-plugin-rss": "2.0.4",
     "@fontsource/atkinson-hyperlegible": "5.2.6",
     "@fontsource/chewy": "5.2.5",
+    "fflate": "0.8.2",
     "playwright": "1.55.0"
   }
 }

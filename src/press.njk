@@ -1,0 +1,111 @@
+---
+layout: page.njk
+title: Press kit
+permalink: /press/
+intro: Facts, descriptions, screenshots and logos for anyone writing about or covering Troop Master. Everything here is free to use in coverage.
+description: The Troop Master press kit - fact sheet, descriptions, screenshots, logos and contact.
+---
+<div class="wrap press">
+  <aside class="copy factsheet" aria-labelledby="facts-h">
+    <h2 id="facts-h">Fact sheet</h2>
+    <dl>
+      <div><dt>Developer</dt><dd>{{ site.studio }} (solo developer)</dd></div>
+      <div><dt>Publisher</dt><dd>Self-published</dd></div>
+      <div><dt>Release</dt><dd>TBA</dd></div>
+      <div><dt>Platform</dt><dd>PC (Windows)</dd></div>
+      <div><dt>Price</dt><dd>TBA</dd></div>
+      <div><dt>Genre</dt><dd>Survival / colony sim / tower defense</dd></div>
+      <div><dt>Players</dt><dd>Single player</dd></div>
+      <div><dt>Engine</dt><dd>Unity</dd></div>
+      <div class="wide"><dt>Website</dt><dd><a href="/">{{ site.url | replace("https://", "") }}</a></dd></div>
+      <div class="wide"><dt>Press contact</dt><dd><a href="mailto:{{ site.contactEmail }}">{{ site.contactEmail }}</a></dd></div>
+    </dl>
+    <a class="btn btn-green btn-link press-zip" href="/press/files/troop-master-press-kit.zip" download>Download everything (.zip)</a>
+  </aside>
+
+  <div class="press-main">
+    <section class="copy" aria-labelledby="short-h">
+      <h2 id="short-h">Short description</h2>
+      <p class="press-quote">Troop Master is a survival game where a troop of teenage Wilderness Scouts builds a camp by day and holds it against the animals of the caves by night.</p>
+    </section>
+
+    <section class="copy" aria-labelledby="long-h">
+      <h2 id="long-h">Long description</h2>
+      <p>Troop Master is a survival game about a troop of Wilderness Scouts camped somewhere they should not be. By day it plays as a colony sim: your scouts gather wood and water, raise a camp, take orders and get on with their own work when you are not watching. By night the animals that live in the caves around you come for the camp all at once, and the same game becomes a tower defense. Dawn settles the bill for both.</p>
+      <p>The scouts are people, not units. Each has a name, a face and a mood that answers to how much attention you pay them, and earns rank by doing the work. Nobody dies: a scout who goes down is knocked out and sent home on the bus. But a night without them still costs the camp.</p>
+      <p>Four maps, from a gentle Forest to a freezing Tundra, each generated fresh for every run. Night raids that scale to hundreds of animals at once. A boss every tenth night. And a rival troop whose paperwork keeps turning up in the wild.</p>
+    </section>
+
+    <section class="copy" aria-labelledby="features-h">
+      <h2 id="features-h">Features</h2>
+      <ul class="press-features">
+        <li>A colony sim by day and a tower defense by night, in the same camp, on the same clock</li>
+        <li>Named scouts with moods, traits, six field badges and 38 perks; rank is earned, never assigned</li>
+        <li>Nobody dies: knocked-out scouts go home on the noon bus unless you built a First Aid Tent and saved the herbs to keep them</li>
+        <li>Four maps with their own animals, weather, hazards and rules</li>
+        <li>Night raids that grow to hundreds of animals, and a named alpha boss every tenth night</li>
+        <li>A storyteller that reads how comfortable your camp is and sends trouble accordingly</li>
+        <li>A story told through painted documents left behind by Troop 13</li>
+        <li>Between runs: the Popcorn Shop, 40 achievements, and the Pact for players who want it harder</li>
+      </ul>
+    </section>
+
+    <section class="copy" aria-labelledby="dev-h">
+      <h2 id="dev-h">About the developer</h2>
+      <p>{{ site.studio }} is one person. Troop Master is in active development.</p>
+    </section>
+  </div>
+</div>
+
+<section class="wrap press-block" aria-labelledby="shots-h">
+  <h2 id="shots-h" class="on-wood">Screenshots</h2>
+  <p class="on-wood-note">1920 × 1080 PNG. Click one to download it. The caption is its alt text.</p>
+  <ul class="press-shots">
+    {%- for s in press.screenshots %}
+    <li>
+      <a class="press-shot" href="/press/files/screenshots/troop-master-{{ s.file }}.png" download>
+        {% set shot = s.file %}{% set alt = s.alt %}{% set sizes = "(min-width: 1100px) 340px, (min-width: 700px) 50vw, 100vw" %}{% set eager = false %}
+        {% include "shot.njk" %}
+      </a>
+      <p>{{ s.alt }}</p>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="wrap press-block" aria-labelledby="logos-h">
+  <h2 id="logos-h" class="on-wood">Logos and art</h2>
+  <ul class="press-logos">
+    <li class="logo-tile logo-light">
+      <img src="/assets/art/wordmark.png" alt="The Troop Master wordmark on a light background" eleventy:widths="600" eleventy:formats="webp,png">
+    </li>
+    <li class="logo-tile logo-dark">
+      <img src="/static/brand/wordmark-on-dark.png" alt="The Troop Master wordmark on its parchment sign, for dark backgrounds" eleventy:widths="600" eleventy:formats="webp,png">
+    </li>
+    <li class="logo-tile logo-light logo-badge">
+      <img src="/assets/art/logo.png" alt="The TM badge" eleventy:widths="169" eleventy:formats="webp,png">
+    </li>
+  </ul>
+  <ul class="press-downloads">
+    {%- for l in press.logos %}
+    <li><a href="/press/files/logos/{{ l.file }}" download>{{ l.label }}</a></li>
+    {%- endfor %}
+    <li>The twelve alphas as transparent cut-outs, in the zip under <code>art/</code></li>
+  </ul>
+  <div class="copy press-brand">
+    <h3>Colors and type</h3>
+    <ul class="swatches">
+      {%- for c in [["Camp green", "#5C8C4D"], ["Tent brown", "#735233"], ["Lake blue", "#4D6B8C"], ["Ember red", "#804238"], ["Parchment", "#F5EBD1"], ["Lamp gold", "#FAD961"], ["Night wood", "#1A1712"]] %}
+      <li><span class="swatch" style="background: {{ c[1] }}"></span><b>{{ c[0] }}</b> <code>{{ c[1] }}</code></li>
+      {%- endfor %}
+    </ul>
+    <p>The game's display font is <b>Chewy</b> (free, Google Fonts).</p>
+  </div>
+</section>
+
+<section class="wrap press-block" aria-labelledby="video-h">
+  <div class="copy">
+    <h2 id="video-h">Video</h2>
+    <p>A trailer and gameplay footage are coming. In the meantime, email <a href="mailto:{{ site.contactEmail }}">{{ site.contactEmail }}</a> for anything you need.</p>
+  </div>
+</section>
