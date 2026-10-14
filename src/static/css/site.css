@@ -246,6 +246,19 @@ figure { margin: 0; }
 .faq dt { font: 1.4rem/1.15 var(--display); color: var(--brown); }
 .faq dd { margin: 0; }
 
+/* news */
+.post-meta { font-size: .9rem; font-weight: 700; color: var(--on-wood-soft); letter-spacing: .02em; }
+.post-meta a { color: var(--gold); }
+.news-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; max-width: 72ch; }
+.news-item { max-width: none; gap: 8px; }
+.news-item .post-meta { color: var(--ink-soft); }
+.news-item h2 { font-size: var(--step-2); }
+.news-item h2 a { color: var(--brown); text-decoration: none; }
+.news-item h2 a:hover { color: var(--green-deep); text-decoration: underline; }
+.post-body { max-width: 68ch; }
+.post-body ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.post-body strong { color: var(--brown); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }

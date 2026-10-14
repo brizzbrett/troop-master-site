@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+<header class="page-head">
+  <div class="wrap">
+    <p class="post-meta"><a href="/news/">News</a> · <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time></p>
+    <h1>{{ title }}</h1>
+  </div>
+</header>
+<div class="page-body">
+  <div class="wrap">
+    <article class="copy post-body">
+      {{ content | safe }}
+    </article>
+    <p class="page-note"><a href="/news/">All news</a> · <a href="/news/feed.xml">RSS feed</a></p>
+  </div>
+</div>

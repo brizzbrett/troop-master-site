@@ -1,0 +1,19 @@
+---
+layout: page.njk
+title: News
+permalink: /news/
+intro: Updates on Troop Master, newest first.
+description: Updates on Troop Master, newest first.
+---
+<div class="wrap">
+  <ol class="news-list">
+    {%- for post in collections.post | reverse %}
+    <li class="copy news-item">
+      <p class="post-meta"><time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time></p>
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      <p>{{ post.data.summary }}</p>
+    </li>
+    {%- endfor %}
+  </ol>
+  <p class="page-note">Follow along with the <a href="/news/feed.xml">RSS feed</a>, or join the email list for the big moments only.</p>
+</div>
