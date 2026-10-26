@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} · {{ site.name }}{% else %}{{ site.name }}: {{ site.tagline }}{% endif %}</title>
+  {%- set fullTitle = title + " · " + site.name if title else "" %}
+  <title>{% if title %}{{ fullTitle if fullTitle | length <= 70 else title }}{% else %}{{ site.name }}: {{ site.tagline }}{% endif %}</title>
   <meta name="description" content="{{ description or site.description }}">
   {%- set pageTitle = (title + " · " + site.name) if title else (site.name + ": " + site.tagline) %}
   {%- if noindex %}

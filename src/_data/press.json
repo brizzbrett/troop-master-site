@@ -39,20 +39,20 @@
   ],
   "logos": [
     {
-      "file": "troop-master-wordmark.png",
-      "label": "Wordmark, transparent (4080 × 861)"
+      "file": "lord-of-the-smores-wordmark.png",
+      "label": "Wordmark, transparent (2596 × 1215)"
     },
     {
-      "file": "troop-master-wordmark-on-light.png",
+      "file": "lord-of-the-smores-wordmark-on-light.png",
       "label": "Wordmark on light"
     },
     {
-      "file": "troop-master-wordmark-on-dark.png",
+      "file": "lord-of-the-smores-wordmark-on-dark.png",
       "label": "Wordmark on its sign, for dark backgrounds"
     },
     {
-      "file": "troop-master-badge.png",
-      "label": "TM badge, transparent (169 × 169)"
+      "file": "lord-of-the-smores-badge.png",
+      "label": "Badge, transparent (169 × 169)"
     }
   ]
 }

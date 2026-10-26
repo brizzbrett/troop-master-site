@@ -18,16 +18,16 @@ const add = (from, zipPath) => {
   const dest = path.join(outDir, zipPath);
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.writeFileSync(dest, bytes);
-  files[`troop-master-press-kit/${zipPath}`] = [bytes, { level: 0 }]; // PNGs are already compressed
+  files[`lord-of-the-smores-press-kit/${zipPath}`] = [bytes, { level: 0 }]; // PNGs are already compressed
 };
 
-for (const s of press.screenshots) add(`src/assets/shots/${s.file}.png`, `screenshots/troop-master-${s.file}.png`);
-add("src/assets/art/wordmark.png", "logos/troop-master-wordmark.png");
-add("src/static/brand/wordmark-on-light.png", "logos/troop-master-wordmark-on-light.png");
-add("src/static/brand/wordmark-on-dark.png", "logos/troop-master-wordmark-on-dark.png");
-add("src/assets/art/logo.png", "logos/troop-master-badge.png");
+for (const s of press.screenshots) add(`src/assets/shots/${s.file}.png`, `screenshots/lord-of-the-smores-${s.file}.png`);
+add("src/assets/art/wordmark.png", "logos/lord-of-the-smores-wordmark.png");
+add("src/static/brand/wordmark-on-light.png", "logos/lord-of-the-smores-wordmark-on-light.png");
+add("src/static/brand/wordmark-on-dark.png", "logos/lord-of-the-smores-wordmark-on-dark.png");
+add("src/assets/art/logo.png", "logos/lord-of-the-smores-badge.png");
 for (const group of alphas) for (const a of group.list) add(`src/assets/art/alpha-${a.file}.png`, `art/alpha-${a.file}.png`);
 
 const zip = zipSync(files);
-fs.writeFileSync(path.join(outDir, "troop-master-press-kit.zip"), zip);
+fs.writeFileSync(path.join(outDir, "lord-of-the-smores-press-kit.zip"), zip);
 console.log(`press kit: ${Object.keys(files).length} files, zip ${(zip.length / 1e6).toFixed(1)} MB`);

@@ -14,7 +14,7 @@ fs.mkdirSync(out, { recursive: true });
 const PAPER = { r: 245, g: 235, b: 209, alpha: 1 };
 const WOOD = { r: 26, g: 23, b: 18, alpha: 1 };
 
-// Icons from the TM badge.
+// Icons from the badge.
 await sharp(art("art/logo.png")).resize(32, 32).png().toFile(path.join(out, "favicon-32.png"));
 await sharp(art("art/logo.png")).resize(180, 180).flatten({ background: PAPER }).png().toFile(path.join(out, "apple-touch-icon.png"));
 
@@ -42,14 +42,14 @@ await sharp(art("art/logo.png")).resize(180, 180).flatten({ background: PAPER })
 const W = 1200, H = 630;
 const bgImg = await sharp(art("shots/hero.png")).resize(W, H, { fit: "cover", position: "top" }).toBuffer();
 const shade = Buffer.from(`<svg width="${W}" height="${H}"><rect width="${W}" height="${H}" fill="rgb(26,23,18)" fill-opacity="0.35"/></svg>`);
-const signW = 860, signH = 270, signX = (W - signW) / 2, signY = (H - signH) / 2;
+const markW = 560;
+const mark = await sharp(art("art/wordmark.png")).resize(markW).toBuffer();
+const markH = (await sharp(mark).metadata()).height;
+const signW = 760, signH = markH + 90, signX = (W - signW) / 2, signY = (H - signH) / 2;
 const sign = Buffer.from(`<svg width="${W}" height="${H}">
   <rect x="${signX + 6}" y="${signY + 12}" width="${signW}" height="${signH}" rx="22" fill="rgb(0,0,0)" fill-opacity="0.35"/>
   <rect x="${signX}" y="${signY}" width="${signW}" height="${signH}" rx="22" fill="#F5EBD1" stroke="#735233" stroke-width="8"/>
 </svg>`);
-const markW = 760;
-const mark = await sharp(art("art/wordmark.png")).resize(markW).toBuffer();
-const markH = (await sharp(mark).metadata()).height;
 await sharp(bgImg)
   .composite([
     { input: shade },
