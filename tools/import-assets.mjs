@@ -21,7 +21,7 @@ const ALPHAS = [
 ];
 const ART = [
   ...ALPHAS.map((a) => `alpha-${a}`),
-  "scout", "scout-portrait", "troop13-logo", "logo",
+  "scout", "scout-portrait", "troop13-logo",
   "emblem-forest", "emblem-jungle", "emblem-desert", "emblem-tundra",
   "mood-inspired", "mood-content", "mood-glum", "mood-miserable",
 ];
@@ -32,7 +32,9 @@ const LORE = [["ledger_0", "lore-memo"], ["badge_0", "lore-badge"], ["sites_0", 
 const jobs = [
   ...SHOTS.map((n) => [path.join(game, "Docs/Screenshots", `${n}.png`), `src/assets/shots/${n}.png`]),
   ...ART.map((n) => [path.join(game, "Docs/media/gdd", `${n}.png`), `src/assets/art/${n}.png`]),
-  [path.join(game, "Assets/Troop Master/Resources/UI/Brand/smores/Wordmark.png"), "src/assets/art/brands/smores/wordmark.png"],
+  // the badge both names share, at its full 512 px (the GDD cutout is 256)
+  [path.join(game, "Assets/Troop Master/Resources/UI/Brand/Badge.png"), "src/assets/art/logo.png"],
+  ...["smores", "honor"].map((b) => [path.join(game, `Assets/Troop Master/Resources/UI/Brand/${b}/Wordmark.png`), `src/assets/art/brands/${b}/wordmark.png`]),
   // Fonts: Chewy is the game's own font; Atkinson Hyperlegible is the body face. Both are OFL/Apache.
   [path.join(site, "node_modules/@fontsource/chewy/files/chewy-latin-400-normal.woff2"), "src/static/fonts/chewy.woff2"],
   ...["400-normal", "700-normal", "400-italic"].map((w) => [
