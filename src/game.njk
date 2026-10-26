@@ -2,8 +2,9 @@
 layout: page.njk
 title: The Game
 permalink: /game/
-intro: Everything Lord of the S'mores is, in more detail than the front page.
-description: How Lord of the S'mores plays - the day, the night, dawn, the camp, the wilderness, the weather and what carries between runs.
+eleventyComputed:
+  intro: "Everything {{ site.name | safe }} is, in more detail than the front page."
+  description: "How {{ site.name | safe }} plays - the day, the night, dawn, the camp, the wilderness, the weather and what carries between runs."
 ---
 <nav class="toc wrap" aria-label="On this page">
   <ul>

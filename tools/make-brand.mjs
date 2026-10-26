@@ -7,7 +7,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const art = (f) => path.join(root, "src/assets", f);
+const site = JSON.parse(fs.readFileSync(path.join(root, "src/_data/site.json"), "utf8")); // the shown name (tools/brand.mjs)
+const art = (f) => path.join(root, "src/assets", f.replace(/^art\/(wordmark|logo)\.png$/, `art/brands/${site.brand}/$1.png`));
 const out = path.join(root, "src/static/brand");
 fs.mkdirSync(out, { recursive: true });
 

@@ -8,6 +8,7 @@
     "build": "eleventy && node tools/press-pack.mjs",
     "build:pages": "eleventy --pathprefix=/troop-master-site/ && node tools/press-pack.mjs",
     "start": "eleventy --serve",
+    "brand": "node tools/brand.mjs",
     "check": "npm run build && node tools/check-links.mjs && html-validate \"_site/**/*.html\""
   },
   "devDependencies": {

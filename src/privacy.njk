@@ -2,12 +2,13 @@
 layout: page.njk
 title: Privacy
 permalink: /privacy/
-description: What this site and the Lord of the S'mores email list keep about you.
+eleventyComputed:
+  description: "What this site and the {{ site.name | safe }} email list keep about you."
 ---
 <div class="wrap">
   <div class="copy">
     <p>This site has no cookies, no analytics and no tracking. Its fonts and images are served from the site itself. It is hosted on GitHub Pages, which keeps ordinary server logs (such as IP addresses) for security.</p>
-    <p>If you join the email list, your address is stored by Kit (kit.com), the service that sends the emails. It is used only to send news about Lord of the S'mores. Every email has an unsubscribe link, and unsubscribing removes you from the list. Your address is never sold or shared.</p>
+    <p>If you join the email list, your address is stored by Kit (kit.com), the service that sends the emails. It is used only to send news about {{ site.name }}. Every email has an unsubscribe link, and unsubscribing removes you from the list. Your address is never sold or shared.</p>
     <p>Questions: <a href="mailto:{{ site.contactEmail }}">{{ site.contactEmail }}</a></p>
   </div>
 </div>

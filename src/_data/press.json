@@ -39,19 +39,19 @@
   ],
   "logos": [
     {
-      "file": "lord-of-the-smores-wordmark.png",
-      "label": "Wordmark, transparent (2348 × 955)"
+      "file": "wordmark.png",
+      "label": "Wordmark, transparent"
     },
     {
-      "file": "lord-of-the-smores-wordmark-on-light.png",
+      "file": "wordmark-on-light.png",
       "label": "Wordmark on light"
     },
     {
-      "file": "lord-of-the-smores-wordmark-on-dark.png",
+      "file": "wordmark-on-dark.png",
       "label": "Wordmark on its sign, for dark backgrounds"
     },
     {
-      "file": "lord-of-the-smores-badge.png",
+      "file": "badge.png",
       "label": "Badge, transparent (512 × 512)"
     }
   ]

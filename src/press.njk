@@ -2,8 +2,9 @@
 layout: page.njk
 title: Press kit
 permalink: /press/
-intro: Facts, descriptions, screenshots and logos for anyone writing about or covering Lord of the S'mores. Everything here is free to use in coverage.
-description: The Lord of the S'mores press kit - fact sheet, descriptions, screenshots, logos and contact.
+eleventyComputed:
+  intro: "Facts, descriptions, screenshots and logos for anyone writing about or covering {{ site.name | safe }}. Everything here is free to use in coverage."
+  description: "The {{ site.name | safe }} press kit - fact sheet, descriptions, screenshots, logos and contact."
 ---
 <div class="wrap press">
   <aside class="copy factsheet" aria-labelledby="facts-h">
@@ -20,18 +21,18 @@ description: The Lord of the S'mores press kit - fact sheet, descriptions, scree
       <div class="wide"><dt>Website</dt><dd><a href="/">{{ site.url | replace("https://", "") }}</a></dd></div>
       <div class="wide"><dt>Press contact</dt><dd><a href="mailto:{{ site.contactEmail }}">{{ site.contactEmail }}</a></dd></div>
     </dl>
-    <a class="btn btn-green btn-link press-zip" href="/press/files/lord-of-the-smores-press-kit.zip" download>Download everything (.zip)</a>
+    <a class="btn btn-green btn-link press-zip" href="/press/files/{{ site.slug }}-press-kit.zip" download>Download everything (.zip)</a>
   </aside>
 
   <div class="press-main">
     <section class="copy" aria-labelledby="short-h">
       <h2 id="short-h">Short description</h2>
-      <p class="press-quote">Lord of the S'mores is a survival game where a troop of teenage Wilderness Scouts builds a camp by day and holds it against the animals of the caves by night.</p>
+      <p class="press-quote">{{ site.name }} is a survival game where a troop of teenage Wilderness Scouts builds a camp by day and holds it against the animals of the caves by night.</p>
     </section>
 
     <section class="copy" aria-labelledby="long-h">
       <h2 id="long-h">Long description</h2>
-      <p>Lord of the S'mores is a survival game about a troop of Wilderness Scouts camped somewhere they should not be. By day it plays as a colony sim: your scouts gather wood and water, raise a camp, take orders and get on with their own work when you are not watching. By night the animals that live in the caves around you come for the camp all at once, and the same game becomes a tower defense. Dawn settles the bill for both.</p>
+      <p>{{ site.name }} is a survival game about a troop of Wilderness Scouts camped somewhere they should not be. By day it plays as a colony sim: your scouts gather wood and water, raise a camp, take orders and get on with their own work when you are not watching. By night the animals that live in the caves around you come for the camp all at once, and the same game becomes a tower defense. Dawn settles the bill for both.</p>
       <p>The scouts are people, not units. Each has a name, a face and a mood that answers to how much attention you pay them, and earns rank by doing the work. Nobody dies: a scout who goes down is knocked out and sent home on the bus. But a night without them still costs the camp.</p>
       <p>Four maps, from a gentle Forest to a freezing Tundra, each generated fresh for every run. Night raids that scale to hundreds of animals at once. A boss every tenth night. And a rival troop whose paperwork keeps turning up in the wild.</p>
     </section>
@@ -52,7 +53,7 @@ description: The Lord of the S'mores press kit - fact sheet, descriptions, scree
 
     <section class="copy" aria-labelledby="dev-h">
       <h2 id="dev-h">About the developer</h2>
-      <p>{{ site.studio }} is one person. Lord of the S'mores is in active development.</p>
+      <p>{{ site.studio }} is one person. {{ site.name }} is in active development.</p>
     </section>
   </div>
 </div>
@@ -63,7 +64,7 @@ description: The Lord of the S'mores press kit - fact sheet, descriptions, scree
   <ul class="press-shots">
     {%- for s in press.screenshots %}
     <li>
-      <a class="press-shot" href="/press/files/screenshots/lord-of-the-smores-{{ s.file }}.png" download>
+      <a class="press-shot" href="/press/files/screenshots/{{ site.slug }}-{{ s.file }}.png" download>
         {% set shot = s.file %}{% set alt = s.alt %}{% set sizes = "(min-width: 1100px) 340px, (min-width: 700px) 50vw, 100vw" %}{% set eager = false %}
         {% include "shot.njk" %}
       </a>
@@ -77,18 +78,18 @@ description: The Lord of the S'mores press kit - fact sheet, descriptions, scree
   <h2 id="logos-h" class="on-wood">Logos and art</h2>
   <ul class="press-logos">
     <li class="logo-tile logo-light">
-      <img src="/assets/art/wordmark.png" alt="The Lord of the S'mores wordmark on a light background" eleventy:widths="600" eleventy:formats="webp,png">
+      <img src="/assets/art/brands/{{ site.brand }}/wordmark.png" alt="The {{ site.name }} wordmark on a light background" eleventy:widths="600" eleventy:formats="webp,png">
     </li>
     <li class="logo-tile logo-dark">
-      <img src="/static/brand/wordmark-on-dark.png" alt="The Lord of the S'mores wordmark on its parchment sign, for dark backgrounds" eleventy:widths="600" eleventy:formats="webp,png">
+      <img src="/static/brand/wordmark-on-dark.png" alt="The {{ site.name }} wordmark on its parchment sign, for dark backgrounds" eleventy:widths="600" eleventy:formats="webp,png">
     </li>
     <li class="logo-tile logo-light logo-badge">
-      <img src="/assets/art/logo.png" alt="The s'mores badge" eleventy:widths="256" eleventy:formats="webp,png">
+      <img src="/assets/art/brands/{{ site.brand }}/logo.png" alt="The {{ site.badge }}" eleventy:widths="256" eleventy:formats="webp,png">
     </li>
   </ul>
   <ul class="press-downloads">
     {%- for l in press.logos %}
-    <li><a href="/press/files/logos/{{ l.file }}" download>{{ l.label }}</a></li>
+    <li><a href="/press/files/logos/{{ site.slug }}-{{ l.file }}" download>{{ l.label }}</a></li>
     {%- endfor %}
     <li>The twelve alphas as transparent cut-outs, in the zip under <code>art/</code></li>
   </ul>
