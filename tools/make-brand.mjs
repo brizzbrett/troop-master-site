@@ -8,14 +8,14 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const site = JSON.parse(fs.readFileSync(path.join(root, "src/_data/site.json"), "utf8")); // the shown name (tools/brand.mjs)
-const art = (f) => path.join(root, "src/assets", f.replace(/^art\/(wordmark|logo)\.png$/, `art/brands/${site.brand}/$1.png`));
+const art = (f) => path.join(root, "src/assets", f.replace(/^art\/wordmark\.png$/, `art/brands/${site.brand}/wordmark.png`));
 const out = path.join(root, "src/static/brand");
 fs.mkdirSync(out, { recursive: true });
 
 const PAPER = { r: 245, g: 235, b: 209, alpha: 1 };
 const WOOD = { r: 26, g: 23, b: 18, alpha: 1 };
 
-// Icons from the badge.
+// Icons from the badge (one for the whole game, whichever name shows).
 await sharp(art("art/logo.png")).resize(32, 32).png().toFile(path.join(out, "favicon-32.png"));
 await sharp(art("art/logo.png")).resize(180, 180).flatten({ background: PAPER }).png().toFile(path.join(out, "apple-touch-icon.png"));
 

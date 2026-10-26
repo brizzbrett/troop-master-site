@@ -26,7 +26,7 @@ for (const s of press.screenshots) add(`src/assets/shots/${s.file}.png`, `screen
 add(`src/assets/art/brands/${site.brand}/wordmark.png`, `logos/${site.slug}-wordmark.png`);
 add("src/static/brand/wordmark-on-light.png", `logos/${site.slug}-wordmark-on-light.png`);
 add("src/static/brand/wordmark-on-dark.png", `logos/${site.slug}-wordmark-on-dark.png`);
-add(`src/assets/art/brands/${site.brand}/logo.png`, `logos/${site.slug}-badge.png`);
+add("src/assets/art/logo.png", `logos/${site.slug}-badge.png`);
 for (const group of alphas) for (const a of group.list) add(`src/assets/art/alpha-${a.file}.png`, `art/alpha-${a.file}.png`);
 
 const zip = zipSync(files);
