@@ -34,7 +34,10 @@ const jobs = [
   ...ART.map((n) => [path.join(game, "Docs/media/gdd", `${n}.png`), `src/assets/art/${n}.png`]),
   // the badge both names share, at its full 512 px (the GDD cutout is 256)
   [path.join(game, "Assets/Troop Master/Resources/UI/Brand/Badge.png"), "src/assets/art/logo.png"],
-  ...["smores", "honor"].map((b) => [path.join(game, `Assets/Troop Master/Resources/UI/Brand/${b}/Wordmark.png`), `src/assets/art/brands/${b}/wordmark.png`]),
+  // each name's title: its logo where it has one (Lord of the S'mores: the menu's and the Steam capsules'), else its wordmark
+  ...[["smores", "Logo"], ["honor", "Wordmark"]].map(([b, f]) => [path.join(game, `Assets/Troop Master/Resources/UI/Brand/${b}/${f}.png`), `src/assets/art/brands/${b}/wordmark.png`]),
+  // the Steam library hero (the menu's Forest camp at dusk, no HUD, no text): the share card's picture
+  [path.join(game, "Docs/steam/store-art/library_hero.jpg"), "src/assets/art/keyart-camp.jpg"],
   // Fonts: Chewy is the game's own font; Atkinson Hyperlegible is the body face. Both are OFL/Apache.
   [path.join(site, "node_modules/@fontsource/chewy/files/chewy-latin-400-normal.woff2"), "src/static/fonts/chewy.woff2"],
   ...["400-normal", "700-normal", "400-italic"].map((w) => [

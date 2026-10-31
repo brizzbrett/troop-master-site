@@ -40,15 +40,15 @@
   "logos": [
     {
       "file": "wordmark.png",
-      "label": "Wordmark, transparent"
+      "label": "Logo, transparent"
     },
     {
       "file": "wordmark-on-light.png",
-      "label": "Wordmark on light"
+      "label": "Logo on light"
     },
     {
       "file": "wordmark-on-dark.png",
-      "label": "Wordmark on its sign, for dark backgrounds"
+      "label": "Logo on dark"
     },
     {
       "file": "badge.png",
