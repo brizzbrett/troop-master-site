@@ -136,7 +136,7 @@ Each version post: the three or four biggest changes from `Docs/CHANGELOG.md` in
 | Genre | Survival / colony sim / tower defense |
 | Players | Single player |
 | Engine | Unity |
-| Website | (the github.io URL) |
+| Website | https://lordofthesmores.com |
 | Press contact | (your new address) |
 
 **Short description** (one sentence, quotable)

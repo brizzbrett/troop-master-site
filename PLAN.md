@@ -1,7 +1,7 @@
 # Troop Master website: plan
 
 ## Status (2026-10-14)
-**P0–P6 done and live** at https://brizzbrett.github.io/troop-master-site/. Kit form 10043486 is wired and tested end to end. The Kit sender is troopmastergame@gmail.com; never use an @yahoo.com sender, because Yahoo's DMARC rule `p=reject` makes Gmail silently refuse it.
+**P0–P6 done and live** at https://lordofthesmores.com (Brett's domain, 2026-10-31: DNS at Squarespace points at GitHub Pages; the old https://brizzbrett.github.io/troop-master-site/ redirects there). Kit form 10043486 is wired and tested end to end. The Kit sender is troopmastergame@gmail.com; never use an @yahoo.com sender, because Yahoo's DMARC rule `p=reject` makes Gmail silently refuse it.
 
 Working on the site:
 - `npm start`: live preview.

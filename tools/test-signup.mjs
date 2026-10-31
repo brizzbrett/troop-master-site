@@ -3,7 +3,7 @@
 import { chromium } from "playwright";
 
 const email = process.argv[2];
-const url = process.argv[3] ?? "https://brizzbrett.github.io/troop-master-site/";
+const url = process.argv[3] ?? "https://lordofthesmores.com/";
 if (!email) { console.error("usage: node tools/test-signup.mjs you@example.com [site-url]"); process.exit(1); }
 
 const browser = await chromium.launch();

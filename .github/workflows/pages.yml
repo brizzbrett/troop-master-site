@@ -24,7 +24,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build:pages
+      - run: npm run build # (served at the domain's root, lordofthesmores.com: no path prefix)
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

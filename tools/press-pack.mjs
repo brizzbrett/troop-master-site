@@ -1,6 +1,6 @@
 // After the Eleventy build: puts the press kit's full-size downloads into _site/press/files/
 // (the 1920x1080 screenshots, the logos, the twelve alpha cut-outs) and zips them all into one file.
-// Runs as part of `npm run build` / `npm run build:pages`.
+// Runs as part of `npm run build`.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
